@@ -6,46 +6,58 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.SetCursorPosition(40, 0);
+            try
             {
-                Console.WriteLine("welcome to my calculater");
-            }
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("write first number + second number and for third number read information under this sentense");
-            int p = 0;
-            int o = 10;
-            Console.WriteLine("NUMBER 1 FOR +");
-            Console.WriteLine("NUMBER 2 FOR -");
-            Console.WriteLine("NUMBER 3 FOR *");
-            Console.WriteLine("NUMBER 4 FOR /");
-           
-            while (p < o)
+                Console.SetCursorPosition(40, 0);
+                {
+                    Console.WriteLine("welcome to my calculater");
+                }
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("write first number + second number and for third number read information under this sentense");
+                int p = 0;
+                int o = 10;
+                Console.WriteLine("NUMBER 1 FOR +");
+                Console.WriteLine("NUMBER 2 FOR -");
+                Console.WriteLine("NUMBER 3 FOR *");
+                Console.WriteLine("NUMBER 4 FOR /");
+
+                while (p < o)
+                {
+
+                    int f = int.Parse(Console.ReadLine());
+                    int w = int.Parse(Console.ReadLine()); ;
+                    int x = int.Parse(Console.ReadLine());
+                    if (x == 1)
+                    {
+                        Console.WriteLine(f + w);
+                    }
+                    if (x == 2)
+                    {
+                        Console.WriteLine(f - w);
+                    }
+                    if (x == 3)
+                    {
+                        Console.WriteLine(f * w);
+                    }
+                    if (x == 4)
+                    {
+                        Console.WriteLine(f / w);
+                    }
+                    p += 1;
+                    Console.ReadKey();
+                    Console.Clear();
+                } 
+                }
+            catch (Exception)
             {
-                int f = int.Parse(Console.ReadLine());
-                int w = int.Parse(Console.ReadLine()); ;
-                int x = int.Parse(Console.ReadLine());
-                if (x == 1)
-                {
-                    Console.WriteLine(f + w);
-                }
-                if (x == 2)
-                {
-                    Console.WriteLine(f - w);
-                }
-                if (x == 3)
-                {
-                    Console.WriteLine(f * w);
-                }
-                if (x == 4)
-                {
-                    Console.WriteLine(f / w);
-                }
-                p += 1;
+                Console.WriteLine("you should wright number.");
                 Console.ReadKey();
-                Console.Clear();
+                throw;
+            }
+            
             }
             
                
         }
     }
-}
+
