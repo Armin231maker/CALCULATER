@@ -6,8 +6,8 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            try
-            {
+            
+            
                 Console.SetCursorPosition(40, 0);
                 {
                     Console.WriteLine("welcome to my calculater");
@@ -20,7 +20,10 @@ namespace ConsoleApp1
                 Console.WriteLine("NUMBER 2 FOR -");
                 Console.WriteLine("NUMBER 3 FOR *");
                 Console.WriteLine("NUMBER 4 FOR /");
-
+            label1:
+            try
+            { 
+                
                 while (p < o)
                 {
 
@@ -51,6 +54,7 @@ namespace ConsoleApp1
             catch (Exception)
             {
                 Console.WriteLine("you should wright number.");
+                goto label1;
                 Console.ReadKey();
                 throw;
             }
@@ -60,4 +64,6 @@ namespace ConsoleApp1
                
         }
     }
+
+
 
